@@ -2,6 +2,7 @@ package com.ibeidan.sort;
 
 /**
  * 选择排序
+ * 选择排序算法在每一步中选取最小值来重新排列，从而达到排序的目的。
  * @author lee
  * DATE 2020/7/29 10:39
  */

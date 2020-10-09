@@ -12,7 +12,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * currentWeight : 节点当前权重，会一直变化
  * effectiveWeight ：有效权重，初始值为weight, 通讯过程中发现节点异常，则-1 ，之后再次选取本节点，调用成功一次则+1，直达恢复到weight 。 用于健康检查，处理异常节点，降低其权重。
  * 算法逻辑
- * (1) 轮询所有节点，计算当前状态下所有节点的effectiveWeight之和totalWeight；
+ * (1) 轮询所有节点，计算当前状态下所有节点的 effectiveWeight之和totalWeight；
  * (2) currentWeight = currentWeight + effectiveWeight; 选出所有节点中currentWeight中最大的一个节点作为选中节点；
  * (3) 选中节点的currentWeight = currentWeight - totalWeight；
  * 注：（为了简单清晰，后面的实现不考虑健康检查effectiveWeight这个功能实现，假设所有节点都是100%可用，所以上面的逻辑要把使用effectiveWeight的地方换成weight

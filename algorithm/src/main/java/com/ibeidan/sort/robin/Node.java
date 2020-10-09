@@ -2,7 +2,7 @@ package com.ibeidan.sort.robin;
 
 /**
  * @author lee
- * @DATE 2020/8/4 20:45
+ * DATE 2020/8/4 20:45
  */
 public class Node {
     private final int weight ;  // 初始权重 （保持不变）
@@ -30,5 +30,14 @@ public class Node {
 
     public String getServerName() {
         return serverName;
+    }
+
+    @Override
+    public String toString() {
+        return "Node{" +
+                "weight=" + weight +
+                ", serverName='" + serverName + '\'' +
+                ", currentWeight=" + currentWeight +
+                '}';
     }
 }

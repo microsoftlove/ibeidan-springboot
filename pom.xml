@@ -12,6 +12,7 @@
         <module>api</module>
         <module>extend</module>
         <module>algorithm</module>
+        <module>kafka</module>
     </modules>
 
 
